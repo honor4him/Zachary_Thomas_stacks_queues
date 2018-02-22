@@ -1,22 +1,33 @@
-# CIS263_Project_Template
-A basic project template for all programming projects in CIS263.  Includes Catch, our unit testing framework.
+# Stacks and Queues
 
-It is considered "good form" to separate different pieces of a project such as the source and executable files into their own directories.  While not every project will use each of these directories, every project should use at least some of them.  A properly setup project will be easier to maintain and diagnose.
+Zachary Thomas
 
-Makefile is a generic Makefile found on https://github.com/mbcrawfo/GenericMakefile, by Michael Crawford.  License for Makefile is MIT license as well, at least at time of download.
+Stacks and Queues are some of the most important data structures in Computer Science.  As you saw in class, they are just lists with access control limits that force them to be used in particular ways.  By forcing users to adhere to these access mechanisms we can solve some potentially hard problems in very simple ways.
 
-## Compiling
+## Assignment
 
-This project container is set to work correctly with the provided Makefile.  To compile, providing your files are in the necessary places (header files in the 'include' directory, etc.) simply typing ```make``` at the commandline will cause the project to compile.  Note that we use the clang++ compiler as the default, though g++ would work as well.  The authors prefer clang++ for the error messages it produces.
+Clone (don't fork) my project template, or follow the instructions I posted in the Youtube video to create a new repository.  Call this repo YOUR_NAME_stacks_queues.  Please remember to provide your actual name and not the words "YOUR_NAME" in the title (I only mention this because people have before...).
 
-## Notes
+Create a ```functions.h file``` (should be in ```includes```).  In this file include the following function signatures:
 
-If you receive a message like the following:
-
-```
-Creating directories
-usage: mkdir [-pv] [-m mode] directory ...
-make: *** [dirs] Error 64
+```C++
+  bool balancedSymbols(std::string input);
+  std::string iToP(std::string input);
 ```
 
-it means that your ```src``` directory is empty.  You have likely included all files in the ```include``` directory instead.
+Create a ```functions.cpp``` (should be in ```src```) file.  In this file implement the functions from the \*.h file.  The functions specifics are:
+
+- ```balancedSymbols``` takes as input a string of arbitrary length.  It checks the entire file to determine if there is a closing parenthesis, square bracket, and curly brace for every corresponding opening symbol.  Use a std::stack<char, std::deque<char> >.
+- ```iToP``` takes as input a valid infix expression and returns the corresponding postfix expression.  
+
+This is an individual assignment.  Talk to others but don't share code.
+
+## Thoughts...
+
+The book has some very good explanations of these topics...
+
+These seem like good exam questions...
+
+## Submission
+
+Turn this in on Blackboard by Friday, February 23rd at 8:00 a.m.
