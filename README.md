@@ -1,6 +1,6 @@
 # Stacks and Queues
 
-Zachary Thomas
+Zachary Thomas homework for CIS 263 Ira Woodring
 
 Stacks and Queues are some of the most important data structures in Computer Science.  As you saw in class, they are just lists with access control limits that force them to be used in particular ways.  By forcing users to adhere to these access mechanisms we can solve some potentially hard problems in very simple ways.
 
