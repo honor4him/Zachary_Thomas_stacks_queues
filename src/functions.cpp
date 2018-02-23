@@ -92,7 +92,7 @@ std::string iToP(std::string input){
 		// See if char is an operator
 		if(input[i] == '*' || input[i] == '/' || input[i] == '+' || input[i] == '-'){
 			
-			// Only push if no parentheses
+			// Only pop if not empty, no parentheses or operator is high priority
 			while(!postStack.empty() && postStack.top() != '(' && highPriority(postStack.top(), input[i])){
 				postfix += postStack.top();
 				postStack.pop();
